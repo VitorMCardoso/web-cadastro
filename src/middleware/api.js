@@ -22,9 +22,9 @@ const apiMiddleware = ({dispatch}) => next => action => {
 
     // axios default configs
     axios.defaults.baseURL = process.env.REACT_APP_BASE_URL || "";
-    axios.defaults.headers.common["Access-Control-Allow-Origin"] = "*";
+    /* axios.defaults.headers.common["Access-Control-Allow-Origin"] = "*";
     axios.defaults.headers.common["Content-Type"] = "application/json";
-    axios.defaults.headers.common["x-api-key"] = "2gYXRJD8wr4GLVG2ggEf1aSvqwAOwetD3fRTNqrt";
+    axios.defaults.headers.common["x-api-key"] = "2gYXRJD8wr4GLVG2ggEf1aSvqwAOwetD3fRTNqrt"; */
 
     //axios.defaults.headers.common["Authorization"] = `Bearer ${accessToken}`;
 
