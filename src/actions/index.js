@@ -1,7 +1,7 @@
 import {SET_CONTACT, API, FETCH_CONTACT} from "./types";
 
 export function fetchContact() {
-    const urlBase = `http://www.mocky.io/v2/${window.location.pathname.split('/').pop()}`;
+    const urlBase = `https://www.mocky.io/v2/${window.location.pathname.split('/').pop()}`;
     return apiAction({
         url: urlBase,
         onSuccess: setContact,
