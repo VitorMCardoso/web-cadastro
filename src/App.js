@@ -23,13 +23,13 @@ class App extends Component {
 
   render() {
     const {
-      name, job_role, about_me, expirience
+      name, job_role, about_me, experience
     } = this.props.data;
     let user = new User(
       name,
       job_role,
       about_me,
-      expirience
+      experience
     )
     return (
       <div>
