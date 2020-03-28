@@ -9,11 +9,11 @@ import { Container } from 'react-materialize';
 // Importanto o component <Switch /> e <Route /> da nossa Lib de rotas
 import { Switch, Route } from 'react-router-dom'
 
-const Main = () => (
+const Main = (props) => (
     <main>
         <Container>
             <Switch>
-                <Route exact path='/' component={Home} />
+                <Route path='/user/*' component={() => <Home user={props.user}/>} />
                 <Route path='/contact' component={Contact} />
             </Switch>
         </Container>

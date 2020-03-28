@@ -5,37 +5,28 @@ import { Row, Col, Card } from 'react-materialize';
 import UserProfile from '../user_profile/user_profile'
 import Experience from '../experience/experience'
 // Importando o avatar da empresa 1
-import company_avatar from '../../images/company.png';
+import company_avatar from '../../images/people.png';
 // Importando o avatar da empresa 1
 import company_avatar2 from '../../images/company2.png';
 
 
-const Home = () => (
+const Home = (props) => (
     <Row>
         <Col m={3} s={12}>
-            <UserProfile />
+            <UserProfile name={props.user.name} job_role={props.user.job_role} />
         </Col>
         <Col m={8} s={12}>
             <h5 className="subtitle">About Me</h5>
             <Card>
                 <div>
-                    <p><b>Lorem</b></p>
-                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laborevoluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-                    <br />
-                    <p><b>Ipsum</b></p>
-                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laborevoluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                    {props.user.about_me}
                 </div>
             </Card>
             <h5 className="subtitle">Experiences</h5>
-            <Experience title="Ruby Developer"
+            <Experience title={props.user.job_role}
                 company="Soundcloud"
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laborevoluptate velit esse cillum dolore eu fugiat id est laborum."
+                description={props.user.experience}
                 avatar={company_avatar}
-            />
-            <Experience title="React Developer"
-                company="Twitter"
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laborevoluptate velit esse cillum dolore eu fugiat id est laborum."
-                avatar={company_avatar2}
             />
         </Col>
     </Row>
